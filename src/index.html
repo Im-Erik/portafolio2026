@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" data-theme="night">
+
 <head>
   <meta charset="utf-8">
   <title>Portafolio2026</title>
@@ -7,7 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <script>
+    const themeController = document.querySelector('.theme-controller');
+
+    themeController.addEventListener('change', (e) => {
+      const theme = e.target.checked ? 'night' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      // Opcional: Guardar la preferencia
+      localStorage.setItem('theme', theme);
+    });
+
+    // Al cargar la página, recuperar el tema guardado
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeController.checked = savedTheme === 'night';
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,25 @@
+<div class="navbar fixed top-0 left-0 w-full z-50 transition-all duration-300" [ngClass]="{
+    'bg-base-100 shadow-lg': scrolled,
+    'bg-base-100/70 backdrop-blur': !scrolled
+  }">
+
+    <div class="max-w-6xl mx-auto w-full flex justify-between px-4">
+
+        <div class="flex-1">
+            <button class="btn btn-circle bg-fuchsia-800 text-gray-200">
+                <!-- svg -->
+            </button>
+            <a class="btn btn-ghost text-xl">PORTAFOLIO</a>
+        </div>
+
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a>Acerca de mi</a></li>
+                <li><a>Proyectos</a></li>
+                <li><a>Skills</a></li>
+                <li><button class="btn btn-active btn-primary">Primary</button></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
