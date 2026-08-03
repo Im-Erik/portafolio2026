@@ -6,4 +6,5 @@
 
  html {
   transition: background-color 0.3s ease, color 0.3s ease;
+  background: rgb(236, 240, 243) !important;
 }

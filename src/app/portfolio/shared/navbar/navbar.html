@@ -1,25 +1,19 @@
-<div class="navbar fixed top-0 left-0 w-full z-50 transition-all duration-300" [ngClass]="{
-    'bg-base-100 shadow-lg': scrolled,
-    'bg-base-100/70 backdrop-blur': !scrolled
-  }">
+<div class="navbar fixed top-0 left-0 z-50 w-full transition-all duration-300" [ngClass]="{
+  'bg-white/80 shadow-lg shadow-black/5 backdrop-blur': scrolled,
+  'bg-transparent': !scrolled
+}">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4">
+        <a href="#hero" class="text-lg font-semibold tracking-[0.3em] text-gray-900 uppercase">
+            Erik<span class="text-pink-500">.</span>dev
+        </a>
 
-    <div class="max-w-6xl mx-auto w-full flex justify-between px-4">
-
-        <div class="flex-1">
-            <button class="btn btn-circle bg-fuchsia-800 text-gray-200">
-                <!-- svg -->
-            </button>
-            <a class="btn btn-ghost text-xl">PORTAFOLIO</a>
-        </div>
-
-        <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-                <li><a>Acerca de mi</a></li>
-                <li><a>Proyectos</a></li>
-                <li><a>Skills</a></li>
-                <li><button class="btn btn-active btn-primary">Primary</button></li>
+        <div class="flex items-center gap-2">
+            <ul class="menu menu-horizontal hidden px-1 text-sm md:flex">
+                <li><a href="#sobre-mi" class="text-gray-600 hover:text-gray-900">Sobre mí</a></li>
+                <li><a href="#proyectos" class="text-gray-600 hover:text-gray-900">Proyectos</a></li>
+                <li><a href="#contacto" class="text-gray-600 hover:text-gray-900">Contacto</a></li>
             </ul>
+            <a href="#contacto" class="btn btn-primary btn-sm">Contactar</a>
         </div>
-
     </div>
 </div>

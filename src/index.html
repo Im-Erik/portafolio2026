@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="night">
+<html lang="es" data-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,9 @@
     // Al cargar la página, recuperar el tema guardado
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeController.checked = savedTheme === 'night';
+    if (themeController) {
+      themeController.checked = savedTheme === 'night';
+    }
   </script>
 </body>
 
