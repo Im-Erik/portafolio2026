@@ -4,7 +4,94 @@
    themes: light, night;
  }
 
+:root {
+  --color-white: #ffffff;
+  --color-gray-900: #0f172a;
+  --color-gray-600: #475569;
+}
+
  html {
   transition: background-color 0.3s ease, color 0.3s ease;
   background: rgb(236, 240, 243) !important;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.theme-dark {
+  background: linear-gradient(135deg, #020617 0%, #111827 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+body.theme-dark .text-gray-900 {
+  color: #f8fafc !important;
+}
+
+body.theme-dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+body.theme-dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+body.theme-dark .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+body.theme-dark .bg-white\/80,
+body.theme-dark .bg-white\/70,
+body.theme-dark .bg-white {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+body.theme-dark .bg-gray-50 {
+  background-color: #1f2937 !important;
+}
+
+body.theme-dark .border-gray-300,
+body.theme-dark .border-gray-200 {
+  border-color: rgba(148, 163, 184, 0.25) !important;
+}
+
+body.theme-dark .border-white\/70 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.theme-dark section:not(#hero),
+body.theme-dark footer:not(#contacto),
+body.theme-dark article:not(#hero),
+body.theme-dark .rounded-3xl:not(#hero),
+body.theme-dark .rounded-2xl:not(#hero) {
+  background-color: rgba(15, 23, 42, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+}
+
+body.theme-dark #hero {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+body.theme-dark #hero img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  filter: none !important;
+  z-index: 1 !important;
+}
+
+body.theme-dark #hero > div {
+  background: transparent !important;
+}
+
+body.theme-light .dark\:text-white {
+  color: var(--color-gray-600) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-light .dark\:text-white {
+    color: var(--color-gray-600) !important;
+  }
 }

@@ -10,10 +10,14 @@
         <div class="flex items-center gap-2">
             <ul class="menu menu-horizontal hidden px-1 text-sm md:flex">
                 <li><a href="#sobre-mi" class="text-gray-600 hover:text-gray-900">Sobre mí</a></li>
+                <li><a href="#stack" class="text-gray-600 hover:text-gray-900">Mi stack</a></li>
                 <li><a href="#proyectos" class="text-gray-600 hover:text-gray-900">Proyectos</a></li>
-                <li><a href="#contacto" class="text-gray-600 hover:text-gray-900">Contacto</a></li>
             </ul>
             <a href="#contacto" class="btn btn-primary btn-sm">Contactar</a>
+            <button type="button" (click)="toggleTheme()" [attr.aria-pressed]="isDarkMode"
+                class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/90 dark:text-white">
+                <span class="text-base">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+            </button>
         </div>
     </div>
 </div>
